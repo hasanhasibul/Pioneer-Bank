@@ -102,11 +102,14 @@
 
             const withdrawBalance = getDeposit("inputWithdraw");
             
-
-            const presentWithdraw =document.getElementById("withdraw").innerText;
-            const currentWithdraw =parseFloat(presentWithdraw);
-            const totalWithdraw =currentWithdraw + withdrawBalance;
-            document.getElementById("withdraw").innerText=totalWithdraw;
+            updateSpan("withdraw",withdrawBalance)
+            updateSpan("currentBalance",-1*withdrawBalance);
+            
+            
+            // const presentWithdraw =document.getElementById("withdraw").innerText;
+            // const currentWithdraw =parseFloat(presentWithdraw);
+            // const totalWithdraw =currentWithdraw + withdrawBalance;
+            // document.getElementById("withdraw").innerText=totalWithdraw;
 
             document.getElementById("inputWithdraw").value= "";
 
